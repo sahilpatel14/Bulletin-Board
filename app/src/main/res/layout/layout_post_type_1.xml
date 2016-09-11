@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="10dp"
+        android:elevation="3dp"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <RelativeLayout
+            android:id="@+id/post_content_container"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="It's a great day to save lives."
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_marginTop="40dp"
+            android:layout_below="@id/post_content_container"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:background="@android:color/darker_gray"
+            />
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/divider"
+                android:id="@+id/container_comments_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/thumbs_up_counter"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginLeft="8dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/tv"
+                    android:layout_height="18dp"
+                    android:layout_width="20dp"
+                    android:text="12"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:textSize="12sp"
+                    android:background="@drawable/notification_circle"
+                    android:gravity="center_vertical|center_horizontal"
+                    />
+
+                    <TextView
+                        android:clickable="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="16sp"
+                        android:text="thumbs up."
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/comments_counter"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/thumbs_up_counter"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginLeft="8dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="2dp"
+                        android:id="@+id/tv1"
+                        android:layout_height="18dp"
+                        android:layout_width="20dp"
+                        android:text="5"
+                        android:textStyle="bold"
+                        android:textColor="#fff"
+                        android:textSize="12sp"
+                        android:background="@drawable/notification_circle"
+                        android:gravity="center_vertical|center_horizontal"
+                        />
+
+                    <TextView
+                        android:clickable="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="16sp"
+                        android:text="comments"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/footer_buttons_container"
+                android:layout_below="@id/container_comments_count"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:background="#f2f2f2"
+                android:layout_height="40dp">
+
+                <LinearLayout
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/button_thumbsUp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <!--<TextView-->
+                        <!--android:layout_marginLeft="2dp"-->
+                        <!--android:layout_marginTop="2dp"-->
+                        <!--android:id="@+id/tv"-->
+                        <!--android:layout_height="18dp"-->
+                        <!--android:layout_width="20dp"-->
+                        <!--android:text="12"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textColor="#fff"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:background="@drawable/notification_circle"-->
+                        <!--android:gravity="center_vertical|center_horizontal"-->
+                        <!--/>-->
+
+                    <ImageButton
+                        android:src="@drawable/ic_thumb_up_black_24dp"
+                        android:backgroundTint="@android:color/holo_blue_bright"
+                        android:background="@null"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:clickable="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="3dp"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:text="Thumbs up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                    <!--<View-->
+                    <!--android:layout_marginLeft="8dp"-->
+                    <!--android:background="@android:color/darker_gray"-->
+                    <!--android:layout_width="0.1dp"-->
+                    <!--android:layout_height="25dp" />-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/button_comment"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:src="@drawable/ic_comment_black_24dp"
+                        android:backgroundTint="@android:color/holo_blue_bright"
+                        android:background="@null"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:clickable="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="3dp"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:text="Comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+</RelativeLayout>

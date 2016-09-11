@@ -1,0 +1,99 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="in.sahilpatel.bulletinboardlayouts.posts.ShareArticleFragment"
+    android:layout_marginLeft="14dp"
+    android:layout_marginRight="14dp"
+    android:layout_marginTop="50dp"
+    android:layout_marginBottom="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/article_heading_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/field_article_heading"
+                android:hint="Heading"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_below="@id/article_heading_container"
+            android:id="@+id/article_subheading_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/field_article_subheading"
+                android:hint="Subheading (Optional)"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:id="@+id/article_image_container"
+            android:layout_below="@id/article_subheading_container"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:hint="Select an image..."
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="Choose"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/article_image_container"
+            android:id="@+id/article_content_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/field_article_content"
+                android:inputType="textMultiLine"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:lines="6"
+                android:minLines="4"
+                android:maxLines="8"
+                android:scrollbars="vertical"
+                android:hint="Content here.. (Optional)"
+                android:imeOptions="actionUnspecified"
+                android:gravity="top|left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </android.support.design.widget.TextInputLayout>
+    </RelativeLayout>
+
+</FrameLayout>

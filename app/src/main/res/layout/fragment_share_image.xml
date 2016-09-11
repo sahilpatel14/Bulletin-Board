@@ -1,0 +1,69 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="in.sahilpatel.bulletinboardlayouts.posts.ShareImageFragment"
+    android:layout_marginLeft="14dp"
+    android:layout_marginRight="14dp"
+    android:layout_marginTop="50dp"
+    android:layout_marginBottom="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/button_select_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_alignParentLeft="true"
+                android:text="Select an image.."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_alignParentRight="true"
+                android:drawableLeft="@drawable/ic_add_a_photo_black_24dp"
+                android:text="  Choose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/post_image"
+            android:layout_below="@id/button_select_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <!--<ImageView-->
+            <!--android:id="@+id/post_image"-->
+            <!--android:layout_marginTop="15dp"-->
+            <!--android:layout_below="@id/button_select_image"-->
+            <!--android:src="@mipmap/ic_launcher"-->
+            <!--android:scaleType="fitCenter"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/post_image"
+            android:inputType="textMultiLine"
+            android:lines="6"
+            android:minLines="4"
+            android:maxLines="8"
+            android:scrollbars="vertical"
+            android:hint="some context about the image"
+            android:gravity="top|left"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>

@@ -1,0 +1,22 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="in.sahilpatel.bulletinboardlayouts.posts.ShareThoughtsFragment"
+    android:layout_marginLeft="14dp"
+    android:layout_marginRight="14dp"
+    android:layout_marginTop="50dp"
+    android:layout_marginBottom="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+
+    <EditText
+        android:inputType="textMultiLine"
+        android:lines="6"
+        android:minLines="4"
+        android:maxLines="8"
+        android:scrollbars="vertical"
+        android:hint="type here..."
+        android:gravity="top|left"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</FrameLayout>
