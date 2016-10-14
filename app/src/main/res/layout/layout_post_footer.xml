@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/post_footer"
+    android:layout_width="match_parent"
+    android:layout_marginTop="15dp"
+    android:background="@color/post_footer_background_color"
+    android:layout_height="40dp">
+
+<LinearLayout
+    android:tag="unClicked"
+    android:clickable="true"
+    android:layout_centerVertical="true"
+    android:layout_alignParentLeft="true"
+    android:layout_marginTop="12dp"
+    android:layout_marginLeft="5dp"
+    android:id="@+id/button_thumbsUp"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:clickable="false"
+        android:id="@+id/drawable_thumbsUp"
+        android:src="@drawable/ic_thumb_up_black_24dp"
+        android:backgroundTint="@android:color/holo_blue_bright"
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/label_thumbsUp"
+        android:clickable="false"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="3dp"
+        android:textSize="@dimen/post_button_text_size"
+        android:textColor="@color/button_color"
+        android:text="@string/label_thumbs_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+
+<LinearLayout
+    android:clickable="true"
+    android:layout_centerVertical="true"
+    android:layout_alignParentRight="true"
+    android:layout_marginTop="12dp"
+    android:layout_marginRight="5dp"
+    android:id="@+id/button_comments"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:clickable="false"
+        android:src="@drawable/ic_comment_black_24dp"
+        android:backgroundTint="@android:color/holo_blue_bright"
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:clickable="false"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/button_color"
+        android:textSize="@dimen/post_button_text_size"
+        android:text="@string/label_comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
+
+
+</RelativeLayout>

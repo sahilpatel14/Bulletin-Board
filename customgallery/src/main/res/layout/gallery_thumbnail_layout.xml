@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<in.sahilpatel.bulletinboard.support.SquareLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    >
+
+    <!--
+    adjustViewBounds = Set this to true if you want the ImageView to adjust its bounds to preserve the aspect ratio of its drawable.
+    scaleType = Controls how the image should be resized or moved to match the size of this ImageView.
+    -->
+    <ImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_height="match_parent" />
+
+</in.sahilpatel.bulletinboard.support.SquareLayout>

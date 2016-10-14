@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/manage_threads" android:title="Manage Threads">
+        <menu>
+            <item
+                android:id="@+id/label_create_thread"
+                android:icon="@drawable/ic_control_point_black_24dp"
+                android:title="Create new thread" />
+        </menu>
+    </item>
+
+    <group android:checkableBehavior="single">
+        <item android:title="Communicate">
+            <menu>
+                <item
+                    android:id="@+id/label_about_this_app"
+                    android:icon="@drawable/ic_help_outline_black_24dp"
+                    android:title="About This App" />
+                <item
+                    android:id="@+id/label_send_invite"
+                    android:icon="@drawable/ic_contact_mail_black_24dp"
+                    android:title="Invite" />
+            </menu>
+        </item>
+    </group>
+
+    <item
+        android:id="@+id/label_logout"
+        android:icon="@drawable/ic_cancel_black_24dp"
+        android:title="Logout" />
+
+</menu>

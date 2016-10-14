@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "32563134980",
+    "firebase_url": "https://bulletin-board-dcee2.firebaseio.com",
+    "project_id": "bulletin-board-dcee2",
+    "storage_bucket": "bulletin-board-dcee2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32563134980:android:c2d0184d83680047",
+        "android_client_info": {
+          "package_name": "in.sahilpatel.bulletinboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "32563134980-rsvd7akpfiedmkp5abp2fju91gue92vr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.sahilpatel.bulletinboard",
+            "certificate_hash": "61347442ADF9B3A4A07101EB897D467DBDD97CFE"
+          }
+        },
+        {
+          "client_id": "32563134980-ki1qdobt16pkjt0u32501ibl1i5389lp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDia0n0lSK49bqbOAgmIvSuaggRnRrzIFU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "32563134980-ki1qdobt16pkjt0u32501ibl1i5389lp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

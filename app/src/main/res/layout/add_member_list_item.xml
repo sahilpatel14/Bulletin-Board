@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="60dp"
+    android:layout_marginLeft="@dimen/layout_heading_margin_left_right"
+    android:layout_marginRight="@dimen/layout_heading_margin_left_right"
+    android:layout_marginTop="@dimen/layout_heading_margin_left_right"
+    android:layout_width="match_parent"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_alignParentLeft="true"
+        android:id="@+id/add_member_image_field"
+        android:background="@null"
+        android:layout_width="50dp"
+        android:src="@drawable/ic_person_add_black_24dp"
+        android:layout_height="50dp" />
+
+    <CheckedTextView
+        android:layout_toRightOf="@id/add_member_image_field"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/add_member_name_field"
+        android:text="name here"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"
+        android:layout_weight="3"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:textAlignment="center"
+        android:layout_marginRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
+

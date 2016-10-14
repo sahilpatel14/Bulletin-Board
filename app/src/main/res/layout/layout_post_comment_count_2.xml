@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    >
+    <View xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/divider"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_width="match_parent"
+
+        android:layout_height="0.7dp"
+        android:background="@color/dividerGrey"
+        />
+
+    <RelativeLayout
+        android:layout_below="@id/divider"
+        android:layout_marginTop="@dimen/post_divider_margin"
+        android:id="@+id/container_comments_count"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/thumbs_up_counter"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="8dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:id="@+id/counter_thumbsUp"
+                android:layout_height="18dp"
+                android:layout_width="20dp"
+                android:text="12"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:textSize="12sp"
+                android:background="@drawable/notification_circle"
+                android:gravity="center_vertical|center_horizontal"
+                />
+
+            <TextView
+                android:clickable="true"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="4dp"
+                android:textSize="@dimen/post_button_text_size"
+                android:text="@string/label_thumbs_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/comments_counter"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/thumbs_up_counter"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="8dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:id="@+id/counter_comments"
+                android:layout_height="18dp"
+                android:layout_width="20dp"
+                android:text="5"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:textSize="12sp"
+                android:background="@drawable/notification_circle"
+                android:gravity="center_vertical|center_horizontal"
+                />
+
+            <TextView
+                android:clickable="true"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="4dp"
+                android:textSize="@dimen/post_button_text_size"
+                android:text="@string/label_comments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="2dp"
+            android:id="@+id/button_read_more"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!--<ImageButton-->
+                <!--android:src="@drawable/ic_format_align_left_black_24dp"-->
+                <!--android:backgroundTint="@android:color/holo_blue_bright"-->
+                <!--android:background="@null"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content" />-->
+
+            <TextView
+                android:clickable="true"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="4dp"
+                android:id="@+id/label_read_more"
+                android:textSize="@dimen/post_button_text_size"
+                android:textColor="@color/readMoreButtonColor"
+                android:text="@string/label_read_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+

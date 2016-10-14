@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BulletinBoard.iml" filepath="$PROJECT_DIR$/BulletinBoard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/customgallery/customgallery.iml" filepath="$PROJECT_DIR$/customgallery/customgallery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imageuploader/imageuploader.iml" filepath="$PROJECT_DIR$/imageuploader/imageuploader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/runtimepermissionvalidator/runtimepermissionvalidator.iml" filepath="$PROJECT_DIR$/runtimepermissionvalidator/runtimepermissionvalidator.iml" />
+    </modules>
+  </component>
+</project>
