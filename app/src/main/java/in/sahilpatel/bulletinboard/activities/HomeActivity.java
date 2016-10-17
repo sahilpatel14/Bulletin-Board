@@ -26,6 +26,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.firebase.client.DataSnapshot;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.ValueEventListener;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
@@ -505,6 +508,38 @@ public class HomeActivity extends AppCompatActivity implements OnSharePostListen
             }
         }
         mViewPagerAdapter.setUser(self);
+
+
+        new FirebaseUserApi().getCurrentUser(user_id, new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                User user = dataSnapshot.getValue(User.class);
+                user.setUid(dataSnapshot.getKey());
+                HomeActivity.this.self = user;
+
+                Map<String, String> threads = user.getThreads();
+
+                List<String> thread_ids = new ArrayList<>(threads.keySet());
+
+                boolean flag = false;
+                for (String thread_id : thread_ids) {
+                    NewThread newThread = new NewThread(thread_id,threads.get(thread_id));
+                    if (!(HomeActivity.this.threads.contains(newThread))){
+                        flag = true;
+                        HomeActivity.this.threads.add(newThread);
+                    }
+                }
+                if (flag == true) {
+                    startThreadsDownload();
+                }
+
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
 
         String message = self.getLast_activity().get("message");
         String timeStamp = self.getLast_activity().get("timestamp");
