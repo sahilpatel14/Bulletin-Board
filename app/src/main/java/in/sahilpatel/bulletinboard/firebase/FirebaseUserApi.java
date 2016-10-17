@@ -34,6 +34,7 @@ public class FirebaseUserApi {
 
     private String TAG = FirebaseUserApi.class.getSimpleName();
     public static final String DEMO_THREAD_KEY = "-KU21POFaZdF6d322erQ";
+    public static final String DEMO_THREAD_NAME = "DEMO";
     /**
      * Generating url for users object. FirebaseApi.getRef returns the new
      * url.
@@ -57,6 +58,7 @@ public class FirebaseUserApi {
         String key = newRef.getKey();
         user.setUid(key);
         new FirebaseThreadApi().addMember(DEMO_THREAD_KEY,user);
+        new FirebaseUserApi().addMemberThread(user.getUid(),DEMO_THREAD_NAME,DEMO_THREAD_KEY);
         return key;
     }
 
@@ -88,6 +90,7 @@ public class FirebaseUserApi {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 User user = dataSnapshot.getValue(User.class);
+                user.setUid(dataSnapshot.getKey());
                 mCallback.onSuccess(user);
             }
 
@@ -96,6 +99,19 @@ public class FirebaseUserApi {
                 mCallback.onFailure("Firebase User Api. Fetching user failed",firebaseError);
             }
         });
+    }
+
+    /**
+     * Takes the key and one callback and returns the User POJO. this object
+     * will contain all the data related to user. Callback is necessary because
+     * Networking fetch calls on Firebase are Asynchronous.
+     * @param key
+     * @param mCallback
+     */
+    public void getCurrentUser(final String key, ValueEventListener listener){
+
+        Query query = mRef.child("/"+key);
+        query.addValueEventListener(listener);
     }
 
     public void getThreadNames(String user_key, ValueEventListener mListener) {

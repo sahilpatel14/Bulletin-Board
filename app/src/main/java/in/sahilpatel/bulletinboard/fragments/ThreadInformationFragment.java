@@ -238,7 +238,7 @@ public class ThreadInformationFragment extends DialogFragment {
     private void addUser(User user){
         Toast.makeText(getContext(), "Adding user", Toast.LENGTH_SHORT).show();
         new FirebaseThreadApi().addMember(thread.getThread_id(),user);
-
+        new FirebaseUserApi().addMemberThread(user.getUid(),thread.getThread_name(),thread.getThread_id());
         FirebaseUserApi firebaseUserApi = new FirebaseUserApi();
 
         String message = user.getName()+" joined "+thread.getThread_name()+" thread.";
@@ -356,15 +356,6 @@ public class ThreadInformationFragment extends DialogFragment {
         members_recycler_view.setAdapter(adapter);
         mProgressDialog.dismiss();
 
-    }
-
-    private void startDownloadService(String user_id) {
-
-        Intent intent = new Intent(getActivity(), ThreadDownloadService.class);
-        intent.putExtra(ThreadDownloadService.USER_ID,user_id);
-
-        getActivity().startService(intent);
-        Log.d(TAG, "startDownloadService: "+"Service started.");
     }
 
     class AddMemberAdapter extends RecyclerView.Adapter<AddMemberAdapter.MemberViewHolder> {

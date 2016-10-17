@@ -27,7 +27,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.firebase.client.DataSnapshot;
 import com.firebase.client.FirebaseError;
+import com.firebase.client.ValueEventListener;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
@@ -296,6 +298,32 @@ public class HomeActivity extends AppCompatActivity implements OnSharePostListen
             @Override
             public void onFailure(String message, FirebaseError error) {
                 Log.d(TAG, "onFailure: " + message + " Firebase says " + error.getMessage());
+            }
+        });
+
+        mFirebaseUserApi.getCurrentUser(user_key, new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                User user = dataSnapshot.getValue(User.class);
+                user.setUid(dataSnapshot.getKey());
+                HomeActivity.this.self = user;
+
+                Map<String, String> threads = user.getThreads();
+
+                List<String> thread_ids = new ArrayList<>(threads.keySet());
+
+                for (String thread_id : thread_ids) {
+                    NewThread newThread = new NewThread(thread_id,threads.get(thread_id));
+                    if (!(HomeActivity.this.threads.contains(newThread))){
+                        HomeActivity.this.threads.add(newThread);
+                    }
+                }
+
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
             }
         });
     }

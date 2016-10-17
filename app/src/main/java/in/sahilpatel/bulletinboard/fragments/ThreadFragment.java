@@ -218,6 +218,7 @@ public class ThreadFragment extends Fragment implements OnPostClickedListener{
                  */
                 if (!posts.contains(post)) {
                     posts.add(post);
+                    Collections.sort(posts, comparator);
                     postsAdapter.notifyDataSetChanged();
                 }
             }
